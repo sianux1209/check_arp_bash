@@ -1,6 +1,5 @@
 #!/bin/bash
 
-FLAG=true
 GATEWAY=$(netstat -rn | grep -e '^0\.0\.0\.0' | awk '{print $2}')
 
 DEFAULT_MAC=$(arp -a | grep ${GATEWAY}")" | awk -F ' ' '{printf $4}')
